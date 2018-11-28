@@ -5,12 +5,9 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Toggle;
@@ -38,8 +35,19 @@ public class VoteController implements Initializable {
 	@FXML RadioButton repub8 = new RadioButton();
 	@FXML RadioButton repub9 = new RadioButton();
 
-	@FXML Label position1, position2, position3, position4, position5, position6, position7, position8, position9 = new Label();
+	@FXML Label position1 = new Label();
+	@FXML Label position2 = new Label();
+	@FXML Label position3 = new Label();
+	@FXML Label position4 = new Label();
+	@FXML Label position5 = new Label();
+	@FXML Label position6 = new Label();
+	@FXML Label position7 = new Label();
+	@FXML Label position8 = new Label();
+	@FXML Label position9 = new Label();
+	
 	@FXML Label voterName = new Label();
+	@FXML Button clearAll = new Button();
+	@FXML Button submit = new Button();
 	ToggleGroup tg1 = new ToggleGroup();
 	ToggleGroup tg2 = new ToggleGroup();
 	ToggleGroup tg3 = new ToggleGroup();
@@ -51,9 +59,11 @@ public class VoteController implements Initializable {
 	ToggleGroup tg9 = new ToggleGroup();
 	
 	Voter voter = new Voter();
+	
 	ArrayList<String> candidates = new ArrayList<String>();
 	ArrayList<RadioButton> demoButtons = new ArrayList<RadioButton>();
 	ArrayList<RadioButton> repubButtons = new ArrayList<RadioButton>();
+	ArrayList<ToggleGroup> toggleGroups = new ArrayList<ToggleGroup>();
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -84,31 +94,38 @@ public class VoteController implements Initializable {
 		setupToggleGroup(demo7, repub7, tg7);
 		setupToggleGroup(demo8, repub8, tg8);
 		setupToggleGroup(demo9, repub9, tg9);
-		
 	}
 	
 	private void setupToggleGroup(RadioButton demo, RadioButton repub, ToggleGroup tg) {
 		demo.setToggleGroup(tg);
 		repub.setToggleGroup(tg);
-//		tg.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
-//			public void changed(ObservableValue<? extends Toggle> ov, Toggle toggle, Toggle new_toggle) {
-//				if (demo.isSelected()) {
-//					
-//				}
-//
-//			}
-//		});
+		toggleGroups.add(tg);
 	}
-
-	public void comboPressed(ActionEvent event) {
-		CheckBox box = (CheckBox) event.getSource();
-		String party = (box.getId().charAt(0) == 'r') ? "repub" : "demo";
-		String otherParty = (box.getId().charAt(0) == 'r') ? "demo" : "repub";
-		int boxNum = Integer.parseInt(box.getId().split(Pattern.quote(party))[1]);
-
-		if (box.isSelected()) {
-			String onOff = party.equals("repub") ? "Republican #" + boxNum + " selcted" : "Democrat #" + boxNum + " selected";
-			System.out.println(onOff);
+	
+	public void clearAll() {
+		setSelectedFalse(demoButtons);
+		setSelectedFalse(repubButtons);
+	}
+	
+	private void setSelectedFalse(ArrayList<RadioButton> buttons) {
+		for (RadioButton rb : buttons) {
+			rb.setSelected(false);
+		}
+	}
+	
+	public void submitVote() {
+		for (ToggleGroup tg : toggleGroups) {
+			Toggle t = tg.getSelectedToggle();
+			try {
+				if (t != null) {
+					String candidate = t.toString()
+										.split(Pattern.quote("'"))[1]
+										.split(Pattern.quote("'"))[0];
+					System.out.println(candidate);
+				}
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
