@@ -114,6 +114,7 @@ public class VoteController implements Initializable {
 	}
 	
 	public void submitVote() {
+		ArrayList<String> candidates = new ArrayList<String>();
 		for (ToggleGroup tg : toggleGroups) {
 			Toggle t = tg.getSelectedToggle();
 			try {
@@ -121,11 +122,13 @@ public class VoteController implements Initializable {
 					String candidate = t.toString()
 										.split(Pattern.quote("'"))[1]
 										.split(Pattern.quote("'"))[0];
+					candidates.add(candidate);
 					System.out.println(candidate);
 				}
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
 		}
+		
 	}
 }
