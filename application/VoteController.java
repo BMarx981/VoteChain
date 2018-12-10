@@ -35,15 +35,15 @@ public class VoteController implements Initializable {
 	@FXML RadioButton repub8 = new RadioButton();
 	@FXML RadioButton repub9 = new RadioButton();
 
-	@FXML Label position1 = new Label();
-	@FXML Label position2 = new Label();
-	@FXML Label position3 = new Label();
-	@FXML Label position4 = new Label();
-	@FXML Label position5 = new Label();
-	@FXML Label position6 = new Label();
-	@FXML Label position7 = new Label();
-	@FXML Label position8 = new Label();
-	@FXML Label position9 = new Label();
+	@FXML Label position1 = new Label("President");
+	@FXML Label position2 = new Label("Senator");
+	@FXML Label position3 = new Label("Representative");
+	@FXML Label position4 = new Label("Govenor");
+	@FXML Label position5 = new Label("State Representative");
+	@FXML Label position6 = new Label("State Senator");
+	@FXML Label position7 = new Label("Mayor");
+	@FXML Label position8 = new Label("Councilman");
+	@FXML Label position9 = new Label("Comptroller");
 	
 	@FXML Label voterName = new Label();
 	@FXML Button clearAll = new Button();

@@ -18,21 +18,21 @@
          <children>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="President" />
                   <RadioButton fx:id="demo1" mnemonicParsing="false" text="Democratic Candidate1" />
                   <RadioButton fx:id="repub1" mnemonicParsing="false" text="Republican Candidate1" />
                </children>
             </VBox>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Senator" />
                   <RadioButton fx:id="demo2" mnemonicParsing="false" text="Democratic Candidate2" />
                   <RadioButton fx:id="repub2" mnemonicParsing="false" text="Republican Candidate2" />
                </children>
             </VBox>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Representative" />
                   <RadioButton fx:id="demo3" mnemonicParsing="false" text="Democratic Candidate3" />
                   <RadioButton fx:id="repub3" mnemonicParsing="false" text="Republican Candidate3" />
                </children>
@@ -43,21 +43,21 @@
          <children>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Governor " />
                   <RadioButton fx:id="demo4" mnemonicParsing="false" text="Democratic Candidate4" />
                   <RadioButton fx:id="repub4" mnemonicParsing="false" text="Republican Candidate4" />
                </children>
             </VBox>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="State Representative" />
                   <RadioButton fx:id="demo5" mnemonicParsing="false" text="Democratic Candidate5" />
                   <RadioButton fx:id="repub5" mnemonicParsing="false" text="Republican Candidate5" />
                </children>
             </VBox>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="State Sentor" />
                   <RadioButton fx:id="demo6" mnemonicParsing="false" text="Democratic Candidate6" />
                   <RadioButton fx:id="repub6" mnemonicParsing="false" text="Republican Candidate6" />
                </children>
@@ -68,21 +68,21 @@
          <children>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Mayor" />
                   <RadioButton fx:id="demo7" mnemonicParsing="false" text="Democratic Candidate7" />
                   <RadioButton fx:id="repub7" mnemonicParsing="false" text="Republican Candidate7" />
                </children>
             </VBox>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Councilman" />
                   <RadioButton fx:id="demo8" mnemonicParsing="false" text="Democratic Candidate8" />
                   <RadioButton fx:id="repub8" mnemonicParsing="false" text="Republican Candidate8" />
                </children>
             </VBox>
             <VBox prefHeight="48.0" prefWidth="182.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Position" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="161.0" text="Judge" />
                   <RadioButton fx:id="demo9" mnemonicParsing="false" text="Democratic Candidate9" />
                   <RadioButton fx:id="repub9" mnemonicParsing="false" text="Republican Candidate9" />
                </children>
